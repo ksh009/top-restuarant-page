@@ -1,6 +1,8 @@
 import './style.css';
+import { createNav } from './nav';
 import { createHomePage } from './home';
 
+createNav();
 createHomePage();
 
 /*
