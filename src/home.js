@@ -1,5 +1,4 @@
 import './style.css';
-import foodImg from './img/img.jpg';
 
 function createHomePage() {
 	const content = document.getElementById('content');
@@ -11,7 +10,7 @@ function createHomePage() {
 
 	headline.textContent = 'Welcome to the Restaurant';
 	copy.textContent = 'We serve the best food in town!';
-	img.src = foodImg;
+	img.src = 'path-to-image.jpg';
 
 	header.appendChild(headline);
 	header.appendChild(copy);
@@ -20,22 +19,3 @@ function createHomePage() {
 }
 
 createHomePage();
-
-/*
-    /project
-    ____/dist
-    ____/node_modules
-    ____/src
-    ________/img
-    ____________img.jpg 
-    ________index.js
-    ________style.css
-    ____.gitingore
-    ____package-lock.json
-    ____package.json
-    ____README.md
-    ____webpack.config.js
-
-
-
-*/
