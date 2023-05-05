@@ -1,12 +1,10 @@
 import './style.css';
 import { createNav } from './nav';
-import { createHomePage } from './home';
+import { createHeroSection } from './hero';
 
 const content = document.getElementById('content');
-content.style.backgroundImage = "url('./img/davide-cantelli.jpg')";
-content.style.backgroundSize = 'cover';
-content.style.backgroundPosition = 'center center';
 content.appendChild(createNav());
+content.appendChild(createHeroSection());
 
 /*
     /project
@@ -17,6 +15,7 @@ content.appendChild(createNav());
     ____/src
     ________/img
     ____________img.jpg 
+    ________nav.js
     ________index.js
     ________style.css
     ____.gitingore
@@ -24,7 +23,4 @@ content.appendChild(createNav());
     ____package.json
     ____README.md
     ____webpack.config.js
-
-
-
 */
