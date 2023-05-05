@@ -55,9 +55,6 @@ button {
 /* Content container */
 #content {
 	height: 100vh;
-	background-image: url('./img/davide-cantelli.jpg');
-	background-size: cover;
-	background-position: center center;
 }
 
 /* Nav Start */

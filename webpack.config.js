@@ -10,11 +10,21 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(png|jpe?g|gif)$/i,
-				loader: 'file-loader',
-				options: {
-					name: '[path][name].[ext]',
-				},
+				test: /\.html$/i,
+				loader: 'html-loader',
+			},
+			{
+				test: /\.(png|jp?g|gif)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							limit: 8192,
+							name: 'img/[name].[ext]',
+							// fallback: 'file-loader',
+						},
+					},
+				],
 			},
 			{
 				test: /\.css$/,
