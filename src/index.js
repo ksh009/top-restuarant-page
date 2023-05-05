@@ -2,9 +2,8 @@ import './style.css';
 import { createNav } from './nav';
 import { createHomePage } from './home';
 
-// createNav();
-// You will have a layout comp to
-// createHomePage();
+const content = document.getElementById('content');
+content.appendChild(createNav());
 
 /*
     /project
