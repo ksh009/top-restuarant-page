@@ -1,10 +1,12 @@
 import './style.css';
 import { createNav } from './nav';
 import { createHeroSection } from './hero';
+import { createMenu } from './menu';
 
 const content = document.getElementById('content');
 content.appendChild(createNav());
 content.appendChild(createHeroSection());
+content.appendChild(createMenu());
 
 /*
     /project
