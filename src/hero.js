@@ -1,7 +1,9 @@
+import foodHeroImg from './img/food-hero.jpg';
+
 export function createHeroSection() {
 	const section = document.createElement('section');
 	section.classList.add('hero');
-	section.style.backgroundImage = "url('./img/test_11zon.jpg')";
+	section.style.backgroundImage = `url(${foodHeroImg})`;
 	section.appendChild(createHeroContent());
 
 	return section;
@@ -19,7 +21,7 @@ function createHeroContent() {
 
 function createHeroTitle() {
 	const title = document.createElement('h1');
-	title.textContent = 'Welcome to My Site';
+	title.textContent = 'Welcome to the Snack Shack';
 	return title;
 }
 
