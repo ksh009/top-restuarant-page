@@ -32,14 +32,16 @@ button {
 	padding: 7px 9px;
 	font-size: 16px;
 	font-weight: bold;
-	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
 	background-color: #4caf50;
 	border: none;
 	border-radius: 15px;
 	cursor: pointer;
+	min-width: 90px;
 	box-shadow: rgb(0 0 0 / 16%) 0px 0px 6px, rgb(0 0 0 / 23%) 0px 0px 6px;
+	justify-content: center;
+	align-items: center;
 }
 
 :root {
