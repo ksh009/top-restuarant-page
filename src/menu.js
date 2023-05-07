@@ -1,10 +1,12 @@
 import foodCardImg1 from './img/food-card1.jpg';
 import foodCardImg2 from './img/food-card2.jpg';
 import foodCardImg3 from './img/food-card3.jpg';
+import foodHeroImg from './img/food-hero.jpg';
 
 export function createMenu() {
 	const section = document.createElement('section');
 	section.classList.add('menu-container');
+	section.style.backgroundImage = `url(${foodHeroImg})`;
 	section.appendChild(
 		createMenuItem(
 			foodCardImg1,
