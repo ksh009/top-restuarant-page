@@ -34,7 +34,7 @@ function createLogo() {
 function createLogoLink() {
 	const logoLink = document.createElement('a');
 	logoLink.href = '#';
-	logoLink.textContent = 'Restaurant';
+	logoLink.textContent = 'Snack Shack';
 	return logoLink;
 }
 

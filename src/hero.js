@@ -1,7 +1,9 @@
+import foodHeroImg from './img/food-hero.jpg';
+
 export function createHeroSection() {
 	const section = document.createElement('section');
 	section.classList.add('hero');
-	section.style.backgroundImage = "url('./img/test_11zon.jpg')";
+	section.style.backgroundImage = `url(${foodHeroImg})`;
 	section.appendChild(createHeroContent());
 
 	return section;
@@ -19,14 +21,14 @@ function createHeroContent() {
 
 function createHeroTitle() {
 	const title = document.createElement('h1');
-	title.textContent = 'Welcome to My Site';
+	title.textContent = 'Welcome to the Snack Shack';
 	return title;
 }
 
 function createHeroText() {
 	const text = document.createElement('p');
 	text.textContent =
-		'Some descriptive text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+		'Bite into Happiness at The Snack Shack. Indulge in our delectable treats and savor every moment. From juicy burgers to crispy fries and everything in between, our menu will leave your taste buds begging for more. Come visit us today!';
 	return text;
 }
 
@@ -34,6 +36,6 @@ function createHeroCTA() {
 	const cta = document.createElement('a');
 	cta.classList.add('cta-btn');
 	cta.href = '#';
-	cta.textContent = 'Sign Up Now';
+	cta.textContent = 'Place an order';
 	return cta;
 }

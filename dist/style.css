@@ -32,14 +32,16 @@ button {
 	padding: 7px 9px;
 	font-size: 16px;
 	font-weight: bold;
-	text-align: center;
 	text-transform: uppercase;
 	color: #fff;
 	background-color: #4caf50;
 	border: none;
 	border-radius: 15px;
 	cursor: pointer;
+	min-width: 90px;
 	box-shadow: rgb(0 0 0 / 16%) 0px 0px 6px, rgb(0 0 0 / 23%) 0px 0px 6px;
+	justify-content: center;
+	align-items: center;
 }
 
 :root {
@@ -60,9 +62,16 @@ button {
 	opacity: 0.8; */
 }
 
+/* Main */
+.main-content-container {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
 /* Nav Start */
 .nav-container {
-	background-color: var(--tertiary-color);
+	background-color: var(--secondary-text-color);
 	opacity: 0.9;
 }
 
@@ -112,11 +121,13 @@ button {
 
 /* Hero */
 .hero {
-	height: 500px;
+	height: 100vh;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	display: flex;
+	/* display: flex; */
+	display: none;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -150,6 +161,86 @@ button {
 }
 
 .hero .cta-btn:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Menu section */
+/*
+	file:///C:/Users/Kyle/Desktop/TOP/TOP-PROJECTS/5.restuarant-page/dist/img/food-hero.jpg
+*/
+.menu-container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	margin: 0 auto;
+	padding: 54px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+}
+
+.menu-container .menu-item {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.2s ease-in-out;
+	height: 81%;
+	width: 90%;
+	margin-top: 20px;
+	background: black;
+	opacity: 0.81;
+}
+
+.menu-container .menu-item img {
+	height: 189px;
+	width: 306px;
+	border-radius: 15px;
+}
+
+.menu-container .menu-item:hover {
+	transform: translateY(-5px);
+}
+
+.menu-container .item-header {
+	font-size: 1.5rem;
+	margin-top: 20px;
+	color: white;
+}
+
+.menu-container .item-description {
+	font-size: 1.2rem;
+	margin-top: 10px;
+	color: white;
+}
+
+.menu-container .item-price {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 10px;
+	color: white;
+}
+
+.menu-container .cta-btn {
+	display: inline-block;
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	color: #333;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.menu-container .cta-btn:hover {
 	background-color: #333;
 	color: #fff;
 }
