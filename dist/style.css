@@ -62,6 +62,13 @@ button {
 	opacity: 0.8; */
 }
 
+/* Main */
+.main-content-container {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
 /* Nav Start */
 .nav-container {
 	background-color: var(--secondary-text-color);

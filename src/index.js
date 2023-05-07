@@ -3,10 +3,18 @@ import { createNav } from './nav';
 import { createHeroSection } from './hero';
 import { createMenu } from './menu';
 
+// Selectors
 const content = document.getElementById('content');
+const main = document.createElement('main');
+
+// Add classes
+main.classList.add('main-content-container');
+
+// Append
 content.appendChild(createNav());
-content.appendChild(createHeroSection());
-content.appendChild(createMenu());
+main.appendChild(createHeroSection());
+main.appendChild(createMenu());
+content.appendChild(main);
 
 /*
     /project
