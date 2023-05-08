@@ -73,7 +73,7 @@ button {
 .nav-container {
 	background-color: var(--secondary-text-color);
 	opacity: 0.9;
-	position: inherit;
+	position: relative;
 }
 
 .nav-container .nav {
@@ -258,13 +258,18 @@ button {
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
 .contact-container .contact-form {
 	background-color: #f4f4f4;
 	border-radius: 5px;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-	padding: 20px;
+	box-shadow: 2px 2px 5px rgb(0 0 0 / 30%);
+	padding: 28px;
+	height: 75%;
+	width: 40%;
+	margin-bottom: 63px;
 }
 
 .contact-container .form-group {
@@ -301,7 +306,7 @@ button {
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
-	margin-top: 10px;
+	margin-top: 24px;
 	padding: 10px 20px;
 	transition: all 0.2s ease-in-out;
 }
