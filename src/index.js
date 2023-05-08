@@ -2,6 +2,7 @@ import './style.css';
 import { createNav } from './nav';
 import { createHeroSection } from './hero';
 import { createMenu } from './menu';
+import { createContactForm } from './contact';
 
 // Selectors
 const content = document.getElementById('content');
@@ -14,6 +15,7 @@ main.classList.add('main-content-container');
 content.appendChild(createNav());
 main.appendChild(createHeroSection());
 main.appendChild(createMenu());
+main.appendChild(createContactForm());
 content.appendChild(main);
 
 /*
