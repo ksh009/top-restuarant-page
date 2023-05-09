@@ -1,5 +1,3 @@
-# top-restuarant-page
-
 # Project - JavaScript - Restaurant Page
 
 - Building a Tic Tac Toe game - This project was built using Webpack as a tool for code bundling.
