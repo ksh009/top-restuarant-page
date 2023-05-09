@@ -14,9 +14,6 @@ const nav = createNav(heroSection, menuSection, contactSection);
 const content = document.getElementById('content');
 const main = document.createElement('main');
 
-// console.log('createNav().returnNavContainer()', createNav().returnNav());
-// const { returnNavContainer, returnNav } = createNav();
-
 // Add classes
 main.classList.add('main-content-container');
 
@@ -26,5 +23,3 @@ main.appendChild(heroSection);
 main.appendChild(menuSection);
 main.appendChild(contactSection);
 content.appendChild(main);
-
-// Event listeners

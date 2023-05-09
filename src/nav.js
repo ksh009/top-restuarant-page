@@ -1,7 +1,3 @@
-// import { heroSection } from './hero';
-// import { menuSection } from './menu';
-// import { contactSection } from './contact';
-
 export function createNav(heroSection, menuSection, contactSection) {
 	const navContainer = createNavContainer();
 	const nav = createNavigation();
