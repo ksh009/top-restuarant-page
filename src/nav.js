@@ -1,3 +1,7 @@
+// import { heroSection } from './hero';
+// import { menuSection } from './menu';
+// import { contactSection } from './contact';
+
 export function createNav() {
 	const navContainer = createNavContainer();
 	const nav = createNavigation();
@@ -10,7 +14,10 @@ export function createNav() {
 	nav.appendChild(auth);
 	navContainer.appendChild(nav);
 
-	return navContainer;
+	const returnNavContainer = () => navContainer;
+	const returnNav = () => nav;
+
+	return { returnNavContainer, returnNav };
 }
 
 function createNavContainer() {
@@ -51,9 +58,10 @@ function createAuthentication() {
 }
 
 function createMiddleButtons() {
-	const heroSection = document.querySelector('.hero');
-	const menuSection = document.querySelector('.menu-container');
-	const contactSection = document.querySelector('.contact-container');
+	// console.log('heroSection', heroSection);
+	// console.log('menuSection', menuSection);
+	// console.log('contactSection', contactSection);
+
 	const middleButtons = document.createElement('div');
 	middleButtons.classList.add('middle-buttons');
 	const button1 = createButton('Home');
