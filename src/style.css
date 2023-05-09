@@ -129,6 +129,11 @@ button {
 	width: 50%;
 }
 
+.nav-container .nav .middle-buttons button {
+	height: 30px;
+	margin-top: 15px;
+}
+
 .nav-container .nav .middle-buttons button:hover {
 	background-color: #3e8e41;
 }
