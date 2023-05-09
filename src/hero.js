@@ -1,6 +1,7 @@
 import foodHeroImg from './img/food-hero.jpg';
 
-export function createHeroSection() {
+export function createHeroSection(navComp) {
+	console.log('navComp', navComp());
 	const section = document.createElement('section');
 	section.classList.add('hero');
 	section.style.backgroundImage = `url(${foodHeroImg})`;

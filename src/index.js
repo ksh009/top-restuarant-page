@@ -8,14 +8,15 @@ import { createContactForm } from './contact';
 const content = document.getElementById('content');
 const main = document.createElement('main');
 
-console.log('createNav().returnNavContainer()', createNav().returnNav());
+// console.log('createNav().returnNavContainer()', createNav().returnNav());
+const { returnNavContainer, returnNav } = createNav();
 
 // Add classes
 main.classList.add('main-content-container');
 
 // Append
-content.appendChild(createNav().returnNavContainer());
-// main.appendChild(createHeroSection());
+content.appendChild(returnNavContainer());
+main.appendChild(createHeroSection(returnNav));
 // main.appendChild(createMenu());
 // main.appendChild(createContactForm());
 content.appendChild(main);
