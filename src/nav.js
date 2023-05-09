@@ -2,7 +2,11 @@
 // import { menuSection } from './menu';
 // import { contactSection } from './contact';
 
-export function createNav() {
+export function createNav(hero, menu, contact) {
+	console.log('hero', hero);
+	console.log('menu', menu);
+	console.log('contact', contact);
+
 	const navContainer = createNavContainer();
 	const nav = createNavigation();
 	const logo = createLogo();
@@ -14,10 +18,7 @@ export function createNav() {
 	nav.appendChild(auth);
 	navContainer.appendChild(nav);
 
-	const returnNavContainer = () => navContainer;
-	const returnNav = () => nav;
-
-	return { returnNavContainer, returnNav };
+	return navContainer;
 }
 
 function createNavContainer() {
