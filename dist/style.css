@@ -11,6 +11,19 @@
 	border: none;
 }
 
+:root {
+	--primary-color: #1992d4;
+	--secondary-color: #f0b429;
+	--tertiary-color: #e2e8f0;
+	--main-text-color: #000000;
+	--secondary-text-color: #ffffff;
+	--input-focus-border-color: #2e5bdb;
+	--input-error-border-color: #d16868;
+	--box-shadow-color: #e8e9e9;
+	/* New */
+	--btn-col-primary: #333;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -34,7 +47,7 @@ button {
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #fff;
-	background-color: #4caf50;
+	background-color: var(--btn-col-primary);
 	border: none;
 	border-radius: 15px;
 	cursor: pointer;
@@ -44,22 +57,9 @@ button {
 	align-items: center;
 }
 
-:root {
-	--primary-color: #1992d4;
-	--secondary-color: #f0b429;
-	--tertiary-color: #e2e8f0;
-	--main-text-color: #000000;
-	--secondary-text-color: #ffffff;
-	--input-focus-border-color: #2e5bdb;
-	--input-error-border-color: #d16868;
-	--box-shadow-color: #e8e9e9;
-}
 /* Content container */
 #content {
 	height: 100vh;
-	/* background-size: cover;
-	background-position: center center;
-	opacity: 0.8; */
 }
 
 /* Main */
@@ -112,12 +112,31 @@ button {
 	margin-left: 15px;
 }
 
-.nav-container .nav .auth button:hover {
-	background-color: #3e8e41;
+.nav-container .nav .auth,
+.middle-buttons button:hover {
+	opacity: 0.9;
 }
 
 .nav-container .nav .auth button:active {
 	background-color: #2c6829;
+}
+
+.nav-container .nav .middle-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
+	width: 50%;
+}
+
+.nav-container .nav .middle-buttons button {
+	height: 30px;
+	margin-top: 15px;
+}
+
+.nav-container .nav .middle-buttons button.active {
+	border: #fff solid 2px;
 }
 
 /* Hero */
@@ -127,8 +146,7 @@ button {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	/* display: flex; */
-	display: none;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -138,16 +156,18 @@ button {
 	max-width: 800px;
 	text-align: center;
 	color: #fff;
+	transform: translateY(-45px);
 }
 
 .hero .hero-content h1 {
-	font-size: 3rem;
+	font-size: 4.5rem;
 	margin-bottom: 1rem;
 }
 
 .hero .hero-content p {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	margin-bottom: 2rem;
+	font-weight: lighter;
 }
 
 .hero .cta-btn {
@@ -167,12 +187,8 @@ button {
 }
 
 /* Menu section */
-/*
-	file:///C:/Users/Kyle/Desktop/TOP/TOP-PROJECTS/5.restuarant-page/dist/img/food-hero.jpg
-*/
 .menu-container {
 	height: 100%;
-	/* display: grid; */
 	display: none;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
@@ -250,10 +266,9 @@ button {
 }
 
 /* Contact us */
-/* Styles for the contact form */
 .contact-container {
 	height: 100%;
-	display: flex;
+	display: none;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -263,10 +278,13 @@ button {
 }
 
 .contact-container .contact-form {
-	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	opacity: 0.81;
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px rgb(0 0 0 / 30%);
-	padding: 28px;
+	padding: 28px 45px;
 	height: 75%;
 	width: 40%;
 	margin-bottom: 63px;
@@ -280,6 +298,7 @@ button {
 	display: block;
 	font-weight: bold;
 	margin-bottom: 5px;
+	color: #fff;
 }
 
 .contact-container .form-group input,
@@ -296,22 +315,23 @@ button {
 .contact-container .form-group input:focus,
 .form-group textarea:focus {
 	outline: none;
-	border-color: #2ecc71;
+	border-color: #ccc;
 }
 
 .contact-container .submit-btn {
-	background-color: #2ecc71;
-	border: none;
-	border-radius: 3px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	margin-top: 24px;
-	padding: 10px 20px;
-	transition: all 0.2s ease-in-out;
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: #fff;
+	color: #333;
+	font-size: 1.5rem;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: background-color 0.3s ease-in-out;
+	margin: 15px;
 }
 
 .contact-container .submit-btn:hover {
-	background-color: #27ae60;
+	background-color: #333;
+	color: #fff;
 }
 

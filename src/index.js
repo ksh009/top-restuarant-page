@@ -4,6 +4,12 @@ import { createHeroSection } from './hero';
 import { createMenu } from './menu';
 import { createContactForm } from './contact';
 
+// Components
+const heroSection = createHeroSection();
+const menuSection = createMenu();
+const contactSection = createContactForm();
+const nav = createNav(heroSection, menuSection, contactSection);
+
 // Selectors
 const content = document.getElementById('content');
 const main = document.createElement('main');
@@ -12,27 +18,8 @@ const main = document.createElement('main');
 main.classList.add('main-content-container');
 
 // Append
-content.appendChild(createNav());
-main.appendChild(createHeroSection());
-main.appendChild(createMenu());
-main.appendChild(createContactForm());
+content.appendChild(nav);
+main.appendChild(heroSection);
+main.appendChild(menuSection);
+main.appendChild(contactSection);
 content.appendChild(main);
-
-/*
-    /project
-    ____/dist
-    ________src
-    ____________img
-    ____/node_modules
-    ____/src
-    ________/img
-    ____________img.jpg 
-    ________nav.js
-    ________index.js
-    ________style.css
-    ____.gitingore
-    ____package-lock.json
-    ____package.json
-    ____README.md
-    ____webpack.config.js
-*/
