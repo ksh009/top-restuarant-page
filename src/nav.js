@@ -51,33 +51,37 @@ function createAuthentication() {
 }
 
 function createMiddleButtons() {
+	const heroSection = document.querySelector('.hero');
+	const menuSection = document.querySelector('.menu-container');
+	const contactSection = document.querySelector('.contact-container');
 	const middleButtons = document.createElement('div');
 	middleButtons.classList.add('middle-buttons');
 	const button1 = createButton('Home');
 	const button2 = createButton('Menu');
 	const button3 = createButton('Contact');
+	button1.classList.add('active');
 	button1.addEventListener('click', () => {
-		// box1.style.display = 'block';
-		// box2.style.display = 'none';
-		// box3.style.display = 'none';
+		// heroSection.style.display = 'flex';
+		// menuSection.style.display = 'none';
+		// contactSection.style.display = 'none';
 		button1.classList.add('active');
 		button2.classList.remove('active');
 		button3.classList.remove('active');
 	});
 
 	button2.addEventListener('click', () => {
-		// box1.style.display = 'none';
-		// box2.style.display = 'block';
-		// box3.style.display = 'none';
+		// heroSection.style.display = 'none';
+		// menuSection.style.display = 'grid';
+		// contactSection.style.display = 'none';
 		button2.classList.add('active');
 		button1.classList.remove('active');
 		button3.classList.remove('active');
 	});
 
 	button3.addEventListener('click', () => {
-		// box1.style.display = 'none';
-		// box2.style.display = 'none';
-		// box3.style.display = 'block';
+		// heroSection.style.display = 'none';
+		// menuSection.style.display = 'none';
+		// contactSection.style.display = 'grid';
 		button3.classList.add('active');
 		button1.classList.remove('active');
 		button2.classList.remove('active');

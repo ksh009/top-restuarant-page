@@ -149,8 +149,8 @@ button {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	/* display: flex; */
-	display: none;
+	display: flex;
+	/* display: none; */
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -275,7 +275,8 @@ button {
 /* Styles for the contact form */
 .contact-container {
 	height: 100%;
-	display: flex;
+	/* display: flex; */
+	display: none;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
