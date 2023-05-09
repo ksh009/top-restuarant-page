@@ -56,6 +56,32 @@ function createMiddleButtons() {
 	const button1 = createButton('Home');
 	const button2 = createButton('Menu');
 	const button3 = createButton('Contact');
+	button1.addEventListener('click', () => {
+		// box1.style.display = 'block';
+		// box2.style.display = 'none';
+		// box3.style.display = 'none';
+		button1.classList.add('active');
+		button2.classList.remove('active');
+		button3.classList.remove('active');
+	});
+
+	button2.addEventListener('click', () => {
+		// box1.style.display = 'none';
+		// box2.style.display = 'block';
+		// box3.style.display = 'none';
+		button2.classList.add('active');
+		button1.classList.remove('active');
+		button3.classList.remove('active');
+	});
+
+	button3.addEventListener('click', () => {
+		// box1.style.display = 'none';
+		// box2.style.display = 'none';
+		// box3.style.display = 'block';
+		button3.classList.add('active');
+		button1.classList.remove('active');
+		button2.classList.remove('active');
+	});
 	middleButtons.appendChild(button1);
 	middleButtons.appendChild(button2);
 	middleButtons.appendChild(button3);

@@ -138,8 +138,8 @@ button {
 	background-color: #3e8e41;
 }
 
-.nav-container .nav .middle-buttons button:active {
-	background-color: #2c6829;
+.nav-container .nav .middle-buttons button.active {
+	background-color: purple;
 }
 
 /* Hero */
