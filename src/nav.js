@@ -2,16 +2,16 @@
 // import { menuSection } from './menu';
 // import { contactSection } from './contact';
 
-export function createNav(hero, menu, contact) {
-	console.log('hero', hero);
-	console.log('menu', menu);
-	console.log('contact', contact);
-
+export function createNav(heroSection, menuSection, contactSection) {
 	const navContainer = createNavContainer();
 	const nav = createNavigation();
 	const logo = createLogo();
 	const auth = createAuthentication();
-	const middleButtons = createMiddleButtons();
+	const middleButtons = createMiddleButtons(
+		heroSection,
+		menuSection,
+		contactSection
+	);
 
 	nav.appendChild(logo);
 	nav.appendChild(middleButtons);
@@ -58,10 +58,10 @@ function createAuthentication() {
 	return auth;
 }
 
-function createMiddleButtons() {
-	// console.log('heroSection', heroSection);
-	// console.log('menuSection', menuSection);
-	// console.log('contactSection', contactSection);
+function createMiddleButtons(heroSection, menuSection, contactSection) {
+	console.log('heroSection MB', heroSection);
+	console.log('menuSection MB', menuSection);
+	console.log('contactSection MB', contactSection);
 
 	const middleButtons = document.createElement('div');
 	middleButtons.classList.add('middle-buttons');
@@ -70,27 +70,27 @@ function createMiddleButtons() {
 	const button3 = createButton('Contact');
 	button1.classList.add('active');
 	button1.addEventListener('click', () => {
-		// heroSection.style.display = 'flex';
-		// menuSection.style.display = 'none';
-		// contactSection.style.display = 'none';
+		heroSection.style.display = 'flex';
+		menuSection.style.display = 'none';
+		contactSection.style.display = 'none';
 		button1.classList.add('active');
 		button2.classList.remove('active');
 		button3.classList.remove('active');
 	});
 
 	button2.addEventListener('click', () => {
-		// heroSection.style.display = 'none';
-		// menuSection.style.display = 'grid';
-		// contactSection.style.display = 'none';
+		heroSection.style.display = 'none';
+		menuSection.style.display = 'grid';
+		contactSection.style.display = 'none';
 		button2.classList.add('active');
 		button1.classList.remove('active');
 		button3.classList.remove('active');
 	});
 
 	button3.addEventListener('click', () => {
-		// heroSection.style.display = 'none';
-		// menuSection.style.display = 'none';
-		// contactSection.style.display = 'grid';
+		heroSection.style.display = 'none';
+		menuSection.style.display = 'none';
+		contactSection.style.display = 'flex';
 		button3.classList.add('active');
 		button1.classList.remove('active');
 		button2.classList.remove('active');
